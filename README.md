@@ -33,6 +33,12 @@ Currently exploring mobile app development to take my ML apps cross-platform.
 - **Robotics:** Arduino + C++  
 - **Tools:** Git, GitHub, Jupyter Notebook, VS Code
 
+![Python](https://img.shields.io/badge/-Python-333?style=flat&logo=python)
+![TensorFlow](https://img.shields.io/badge/-TensorFlow-333?style=flat&logo=tensorflow)
+![Keras](https://img.shields.io/badge/-Keras-333?style=flat&logo=keras)
+![Flask](https://img.shields.io/badge/-Flask-333?style=flat&logo=flask)
+![FastAPI](https://img.shields.io/badge/-FastAPI-333?style=flat&logo=fastapi)
+
 ---
 
 📈 **Next Goals**
