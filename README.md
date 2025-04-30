@@ -1,14 +1,12 @@
-
-## 👋 Hi, I'm Berkay Bakaç
-
-**Computer Engineering Student | AI & Data Science Developer**
+<h1 align="center">Hi, I'm Berkay Bakaç 👋</h1>
+<p align="center">Computer Engineering Student | AI/ML </p>
 
 ---
 
 🎯 **About Me**
 
-I'm a final-year Computer Engineering student who builds real-world AI and data-driven applications.
-I've worked on multiple applied machine learning projects with NLP, classification, and recommendation systems.
+I'm a final-year Computer Engineering student who builds real-world AI and data-driven applications.  
+I’ve worked on multiple applied machine learning projects with NLP, classification, and recommendation systems.  
 Currently exploring mobile app development to take my ML apps cross-platform.
 
 ---
@@ -32,22 +30,28 @@ Currently exploring mobile app development to take my ML apps cross-platform.
 
 ---
 
-🧰 **Tech Stack**
+🛠 **Tech Stack**
 
-- **Languages:** Python, C#, C, C++, JavaScript, Swift
-- **AI/ML:** TensorFlow, Keras, scikit-learn, XGBoost, Pandas, NLTK, Surprise
-- **Frameworks:** Flask, FastAPI, ASP.NET Core MVC
-- **Frontend:** HTML/CSS, basic JavaScript, Streamlit
-- **Tools:** Git, GitHub, Jupyter Notebook, VS Code, GitHub Actions
-- **Database:** SQLite, Flask-SQLAlchemy, EF Core
+- **Languages:** Python, C#, C, C++, JavaScript  
+- **AI/ML:** TensorFlow, Keras, scikit-learn, XGBoost, Pandas, NLTK  
+- **Frameworks:** Flask, FastAPI, ASP.NET Core MVC  
+- **Frontend:** HTML/CSS, basic JS  
 - **Embedded & Robotics:** Arduino + C++
+- **Database:** SQLite, Flask-SQLAlchemy, EF Core
+- **Tools:** Git, GitHub, Jupyter Notebook, VS Code, GitHub Actions
+
+![Python](https://img.shields.io/badge/-Python-333?style=flat&logo=python)
+![TensorFlow](https://img.shields.io/badge/-TensorFlow-333?style=flat&logo=tensorflow)
+![Keras](https://img.shields.io/badge/-Keras-333?style=flat&logo=keras)
+![Flask](https://img.shields.io/badge/-Flask-333?style=flat&logo=flask)
+![FastAPI](https://img.shields.io/badge/-FastAPI-333?style=flat&logo=fastapi)
 
 ---
 
-🎯 **Next Goals**
+📈 **Next Goals**
 
-- Build and publish my first AI-powered mobile app (Flutter or Swift + Python API)
-- Deepen NLP & model deployment skills with Hugging Face, FastAPI, and mobile integration
+- Build and publish my first AI-powered mobile app (Whit Swift)  
+- Deepen NLP & model deployment skills with Hugging Face and mobile integration  
 - Expand GitHub profile with mobile + AI hybrid projects
 
 ---
@@ -62,13 +66,3 @@ Currently exploring mobile app development to take my ML apps cross-platform.
 
 > 🌐 [Portfolio Website → berkaybakac.github.io](https://berkaybakac.github.io)
 
-
-
----
-
-📫 **Contact**
-
-- **Email:** berkaybakacx@gmail.com  
-- **LinkedIn:** [linkedin.com/in/berkay-bakaç](https://www.linkedin.com/in/berkay-baka%C3%A7)
-
----
