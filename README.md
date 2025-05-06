@@ -20,7 +20,7 @@ Currently exploring mobile app development to take my ML apps cross-platform.
 - 🎵 [Music Recommendation System](https://github.com/berkaybakac/Music-Recommendation-System) – Spotify API + KMeans for music clustering
 - 🍰 [PistachioDelights](https://github.com/berkaybakac/PistachioDelights) – Flask-based Turkish dessert e-commerce demo
 - 🤖 [Line Follower Robot](https://github.com/berkaybakac/Line-Follower-Robot) – Arduino robot project using IR sensors
-- 📝 [To-do List App](https://github.com/berkaybakac/To-do-List-App) – Python + FastAPI + SQLite-based personal task manager
+- 📝 [To-do List](https://github.com/berkaybakac/To-do-List) – Python + FastAPI + SQLite-based personal task manager
 - 🔁 [CICD-Demo](https://github.com/berkaybakac/cicd-demo) – GitHub Actions based CI/CD setup with pytest and Ubuntu runner
 - 📊 [FaceRecognitionCNN](https://github.com/berkaybakac/FaceRecognitionCNN) – CNN-based facial emotion recognition (with academic PDF)
 - 💿 [Album Management System](https://github.com/berkaybakac/album-management-system3) – ASP.NET Core MVC app for album records management
