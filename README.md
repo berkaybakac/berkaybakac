@@ -17,9 +17,9 @@ Currently exploring mobile app development to take my ML apps cross-platform.
 - 🧬 [COVID19-DataMining](https://github.com/berkaybakac/COVID19-DataMining) – ML-based patient outcome prediction (ANN, XGBoost, etc.)
 - 🔢 [MNIST Digit Classifier](https://github.com/berkaybakac/MNIST-Digit-Classifier) – CNN built using TensorFlow & Keras
 - 🎥 [Movie Recommendation System](https://github.com/berkaybakac/Movie-Recommendation-System) – Streamlit app with hybrid recommendation engine
-- 🎵 [Music Recommendation System](https://github.com/berkaybakac/Music-Recommendation-System) – Spotify API + KMeans for music clustering
+- 🎵 [Music Recommendation System](https://github.com/berkaybakac/Music-Recommend-System) – Spotify API + KMeans for music clustering
 - 🍰 [PistachioDelights](https://github.com/berkaybakac/PistachioDelights) – Flask-based Turkish dessert e-commerce demo
-- 🤖 [Line Follower Robot](https://github.com/berkaybakac/Line-Follower-Robot) – Arduino robot project using IR sensors
+- 🤖 [Line Follower Robot](https://github.com/berkaybakac/LineFollowerRobot) – Arduino robot project using IR sensors
 - 📝 [To-do List](https://github.com/berkaybakac/To-do-List) – Python + FastAPI + SQLite-based personal task manager
 - 🔁 [CICD-Demo](https://github.com/berkaybakac/cicd-demo) – GitHub Actions based CI/CD setup with pytest and Ubuntu runner
 - 📊 [FaceRecognitionCNN](https://github.com/berkaybakac/FaceRecognitionCNN) – CNN-based facial emotion recognition (with academic PDF)
