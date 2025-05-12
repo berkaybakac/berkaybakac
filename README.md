@@ -13,6 +13,7 @@ Currently exploring mobile app development to take my ML apps cross-platform.
 
 🧠 **Selected Projects**
 
+- 🔍 [Handwriting Text Recognition](https://github.com/berkaybakac/handwriting-text-recognition) – OCR system using OpenCV and Tesseract — no deep learning
 - 🧠 [EmotionAnalyzer](https://github.com/berkaybakac/EmotionAnalyzer) – NLP pipeline for tweet emotion detection + Flask web UI
 - 🧬 [COVID19-DataMining](https://github.com/berkaybakac/COVID19-DataMining) – ML-based patient outcome prediction (ANN, XGBoost, etc.)
 - 🔢 [MNIST Digit Classifier](https://github.com/berkaybakac/MNIST-Digit-Classifier) – CNN built using TensorFlow & Keras
