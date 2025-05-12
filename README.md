@@ -34,7 +34,7 @@ Currently exploring mobile app development to take my ML apps cross-platform.
 🛠 **Tech Stack**
 
 - **Languages:** Python, C#, C, C++, JavaScript  
-- **AI/ML:** TensorFlow, Keras, scikit-learn, XGBoost, Pandas, NLTK  
+- **AI/ML:** TensorFlow, Keras, scikit-learn, XGBoost, Pandas, NLTK, OpenCV
 - **Frameworks:** Flask, FastAPI, ASP.NET Core MVC  
 - **Frontend:** HTML/CSS, basic JS  
 - **Embedded & Robotics:** Arduino + C++
