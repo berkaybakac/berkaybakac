@@ -1,9 +1,9 @@
-<h1 align="center">Hi, I'm Berkay Bakaç 👋</h1>
+<h1 align="center">Hi, I'm Berkay Bakaç </h1>
 <p align="center">Computer Engineering Student | AI/ML </p>
 
 ---
 
-🎯 **About Me**
+**About Me**
 
 I'm a final-year Computer Engineering student who builds real-world AI and data-driven applications.  
 I’ve worked on multiple applied machine learning projects with NLP, classification, and recommendation systems.  
@@ -11,27 +11,27 @@ Currently exploring mobile app development to take my ML apps cross-platform.
 
 ---
 
-🧠 **Selected Projects**
+**Selected Projects**
 
-- 🔍 [Handwriting Text Recognition](https://github.com/berkaybakac/handwriting-text-recognition) – OCR system using OpenCV and Tesseract — no deep learning
-- 🧠 [EmotionAnalyzer](https://github.com/berkaybakac/EmotionAnalyzer) – NLP pipeline for tweet emotion detection + Flask web UI
-- 🧬 [COVID19-DataMining](https://github.com/berkaybakac/COVID19-DataMining) – ML-based patient outcome prediction (ANN, XGBoost, etc.)
-- 🔢 [MNIST Digit Classifier](https://github.com/berkaybakac/MNIST-Digit-Classifier) – CNN built using TensorFlow & Keras
-- 🎥 [Movie Recommendation System](https://github.com/berkaybakac/Movie-Recommendation-System) – Streamlit app with hybrid recommendation engine
-- 🎵 [Music Recommendation System](https://github.com/berkaybakac/Music-Recommend-System) – Spotify API + KMeans for music clustering
-- 🍰 [PistachioDelights](https://github.com/berkaybakac/PistachioDelights) – Flask-based Turkish dessert e-commerce demo
-- 🤖 [Line Follower Robot](https://github.com/berkaybakac/LineFollowerRobot) – Arduino robot project using IR sensors
-- 📝 [To-do List](https://github.com/berkaybakac/To-do-List) – Python + FastAPI + SQLite-based personal task manager
-- 🔁 [CICD-Demo](https://github.com/berkaybakac/cicd-demo) – GitHub Actions based CI/CD setup with pytest and Ubuntu runner
-- 📊 [FaceRecognitionCNN](https://github.com/berkaybakac/FaceRecognitionCNN) – CNN-based facial emotion recognition (with academic PDF)
-- 💿 [Album Management System](https://github.com/berkaybakac/album-management-system3) – ASP.NET Core MVC app for album records management
-- 🧑‍🎓 [Student Management System](https://github.com/berkaybakac/Student-management2) – ASP.NET Core MVC app for CRUD on student data
-- 🌸 [IrisReadingApp](https://github.com/berkaybakac/Json-Read1) – ASP.NET Core MVC app that reads and visualizes iris.json dataset
-- 📦 [Product Tracking System](https://github.com/berkaybakac/ProductTrackingSystem4) – .NET-based inventory management web app
+- [Handwriting Text Recognition](https://github.com/berkaybakac/handwriting-text-recognition) – OCR system using OpenCV and Tesseract — no deep learning
+- [EmotionAnalyzer](https://github.com/berkaybakac/EmotionAnalyzer) – NLP pipeline for tweet emotion detection + Flask web UI
+- [COVID19-DataMining](https://github.com/berkaybakac/COVID19-DataMining) – ML-based patient outcome prediction (ANN, XGBoost, etc.)
+- [MNIST Digit Classifier](https://github.com/berkaybakac/MNIST-Digit-Classifier) – CNN built using TensorFlow & Keras
+- [Movie Recommendation System](https://github.com/berkaybakac/Movie-Recommendation-System) – Streamlit app with hybrid recommendation engine
+- [Music Recommendation System](https://github.com/berkaybakac/Music-Recommend-System) – Spotify API + KMeans for music clustering
+- [PistachioDelights](https://github.com/berkaybakac/PistachioDelights) – Flask-based Turkish dessert e-commerce demo
+- [Line Follower Robot](https://github.com/berkaybakac/LineFollowerRobot) – Arduino robot project using IR sensors
+- [To-do List](https://github.com/berkaybakac/To-do-List) – Python + FastAPI + SQLite-based personal task manager
+- [CICD-Demo](https://github.com/berkaybakac/cicd-demo) – GitHub Actions based CI/CD setup with pytest and Ubuntu runner
+- [FaceRecognitionCNN](https://github.com/berkaybakac/FaceRecognitionCNN) – CNN-based facial emotion recognition (with academic PDF)
+- [Album Management System](https://github.com/berkaybakac/album-management-system3) – ASP.NET Core MVC app for album records management
+- [Student Management System](https://github.com/berkaybakac/Student-management2) – ASP.NET Core MVC app for CRUD on student data
+- [IrisReadingApp](https://github.com/berkaybakac/Json-Read1) – ASP.NET Core MVC app that reads and visualizes iris.json dataset
+- [Product Tracking System](https://github.com/berkaybakac/ProductTrackingSystem4) – .NET-based inventory management web app
 
 ---
 
-🛠 **Tech Stack**
+**Tech Stack**
 
 - **Languages:** Python, C#, C, C++, JavaScript  
 - **AI/ML:** TensorFlow, Keras, scikit-learn, XGBoost, Pandas, NLTK, OpenCV
@@ -49,7 +49,7 @@ Currently exploring mobile app development to take my ML apps cross-platform.
 
 ---
 
-📈 **Next Goals**
+**Next Goals**
 
 - Build and publish my first AI-powered mobile app (Whit Swift)  
 - Deepen NLP & model deployment skills with Hugging Face and mobile integration  
@@ -57,7 +57,7 @@ Currently exploring mobile app development to take my ML apps cross-platform.
 
 ---
 
-📬 **Contact**
+**Contact**
 
 - **Email:** berkaybakacx@gmail.com
 - **GitHub:** [berkaybakac](https://github.com/berkaybakac)
@@ -65,5 +65,5 @@ Currently exploring mobile app development to take my ML apps cross-platform.
 
 ---
 
-> 🌐 [Portfolio Website → berkaybakac.github.io](https://berkaybakac.github.io)
+> [Portfolio Website → berkaybakac.github.io](https://berkaybakac.github.io)
 
