@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="270" viewBox="0 0 1200 270" role="img" aria-labelledby="title desc">
-<title id="title">Berkay Bakaç — Software Engineer</title><desc id="desc">APIs, devices and field operations. Building and maintaining device-connected software.</desc>
+<title id="title">Berkay Bakaç — Software Engineer, Backend &amp; Device Integration</title><desc id="desc">Backend, Edge, Production. Building software for real devices, from development to field support.</desc>
 <rect width="1200" height="270" rx="18" fill="#142438"/>
 <path d="M800 0 V270 M1000 0 V270 M0 215 H1200" stroke="#273b50" stroke-width="1"/>
 <rect x="42" y="43" width="5" height="140" rx="2" fill="#68d8b3"/>
 <text x="69" y="87" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="700" fill="#f6f8fb">Berkay Bakaç</text>
-<text x="69" y="128" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" fill="#b7ccde">Software Engineer</text>
-<text x="69" y="173" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d4e0eb">Building software. Supporting it in the field.</text>
+<text x="69" y="128" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" fill="#b7ccde">Software Engineer | Backend &amp; Device Integration</text>
+<text x="69" y="173" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d4e0eb">From backend services to devices in daily use.</text>
 <path d="M815 127 H1081" stroke="#68d8b3" stroke-width="2"/>
 <g fill="#142438" stroke="#68d8b3" stroke-width="2"><circle cx="815" cy="127" r="10"/><circle cx="948" cy="127" r="10"/><circle cx="1081" cy="127" r="10"/></g>
-<g font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#d4e0eb" text-anchor="middle"><text x="815" y="171">APIs</text><text x="948" y="171">Devices</text><text x="1081" y="171">Operations</text></g>
+<g font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#d4e0eb" text-anchor="middle"><text x="815" y="171">Backend</text><text x="948" y="171">Edge</text><text x="1081" y="171">Production</text></g>
 <text x="69" y="247" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#a4bdcf">PYTHON  /  C#  /  TYPESCRIPT</text>
 </svg>
