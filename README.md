@@ -4,8 +4,6 @@
 
 I build backend services and device-connected software used in stores, restaurants, fitness locations and a school. At Statek Stabil Teknoloji, I am the sole software developer responsible for requirements, implementation, deployment and field support.
 
-My work spans Python audio systems, C#/.NET services and TypeScript applications, including concurrent credit accounting, reconnect recovery and updates on customer machines.
-
 Based in Türkiye. **Open to international remote, contractor and relocation opportunities.**
 
 [Engineering case studies](case-studies.md) · [LinkedIn](https://www.linkedin.com/in/berkay-bakac/) · [Email](mailto:berkaybakacwork@gmail.com)
@@ -19,11 +17,9 @@ Based in Türkiye. **Open to international remote, contractor and relocation opp
 | [VeliGeldi — case study](case-studies.md#veligeldi) | School pickup notifications and licensing/TTS services with .NET and PostgreSQL | 1 school |
 | [Turnstile Device Agent — case study](case-studies.md#turnstile) | Python, vendor WebSocket integration, Raspberry Pi kiosks and GPIO control | 7 locations across 3 cities |
 
-Deployment counts last confirmed 2026-09-08. Turnstile and VeliGeldi source code is private; the case studies describe my work without exposing private source code.
+Deployment counts last confirmed 2026-09-08. Turnstile and VeliGeldi source code is private; public case studies cover the engineering decisions.
 
 ### Engineering notes
-
-The work I enjoy most starts when software meets its operating environment: concurrent requests, interrupted connections, constrained displays and updates on customer machines.
 
 - [Audio diagnostics and bounded recovery](case-studies.md#announceflow)
 - [Making existing display hardware usable](case-studies.md#sepetarasi)

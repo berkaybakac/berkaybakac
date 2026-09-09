@@ -37,6 +37,8 @@ AnnounceFlow combines scheduled announcements, playlists, live audio and automat
 
 Audio interruptions required looking at the sender, network and receiver together. I added diagnostic context, reduced UDP audio block size to address fragmentation, and implemented bounded recovery with cooldowns and stop/start race protection. Those changes address different failure modes; I do not treat one successful session as proof that every audio issue is solved.
 
+**Public implementation:** [UDP block sizing](https://github.com/berkaybakac/announceflow/commit/648bec4b5db6ff57215597c63ecdffee04e65822) · [Recovery cooldown](https://github.com/berkaybakac/announceflow/commit/45edd2dc4e7ca79f2e4988d8b20c94c9c554a0c7).
+
 **Stack:** Python, Flask, SQLite, Raspberry Pi/Linux, Windows audio capture. [Source and setup](https://github.com/berkaybakac/announceflow).
 
 <a id="sepetarasi"></a>
@@ -47,5 +49,7 @@ Audio interruptions required looking at the sender, network and receiver togethe
 The product connects the cashier application, administration and customer order display over a local network. It includes real-time order updates, audio announcements and receipt-printing integration.
 
 The customer's display hardware could not be treated like a modern desktop browser. I implemented a dedicated HTML compatibility renderer and display presets. I also added reconnect/snapshot recovery coverage and changed item loading from per-order queries to a batched database query.
+
+**Public implementation:** [Display compatibility](https://github.com/berkaybakac/sepetarasi-order-tracking/commit/82da7140a523c691f7a42130c51810db5aa70477) · [Reconnect coverage](https://github.com/berkaybakac/sepetarasi-order-tracking/commit/367b58d48d6a627f20f7ed458abe79137e9cd5fa) · [Batched queries](https://github.com/berkaybakac/sepetarasi-order-tracking/commit/d3c8bce0881ee5f0b73bfe2038a84d138eacf7d7).
 
 **Stack:** TypeScript, Fastify, React, Electron, SQLite/Drizzle, WebSocket. [Source and setup](https://github.com/berkaybakac/sepetarasi-order-tracking).
