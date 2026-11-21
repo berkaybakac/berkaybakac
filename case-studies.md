@@ -1,55 +1,87 @@
-# Selected engineering work
+# Engineering case studies
 
-I build and maintain these products as the sole software developer at Statek Stabil Teknoloji. Deployment figures below are snapshots confirmed on 2026-09-08.
+I build and maintain these products as the sole software developer at Statek Stabil Teknoloji. I work directly with the people who use them and stay involved through release, monitoring, and field support.
 
-<a id="turnstile"></a>
+[Turnstile](#turnstile) · [SepetArası](#sepetarasi) · [VeliGeldi](#veligeldi) · [AnnounceFlow](#announceflow) · [Price Checker](#retail-price-checker) · [Havale Bildirim](#bank-transfer-notifications)
+
+<a name="turnstile"></a>
+
 ## Turnstile Device Agent
 
-**In use at 7 locations across 3 cities.**
+**Built software for 18 turnstiles across six cities as of 21 November 2026.**
 
-The agent connects a vendor access service to a Raspberry Pi kiosk and physical turnstile outputs. It handles device communication, the local display, GPIO control, deployment and diagnostics. Membership decisions belong to the vendor service.
+I wrote the Python agent that connects a vendor access platform to Raspberry Pi kiosks and GPIO-controlled turnstiles. I validated incoming WebSocket events before they could trigger hardware. During a documented 10-hour upstream outage, the affected gates stayed usable through their configured offline mode.
 
-One integration issue was incomplete access-direction information in vendor messages. I added explicit validation and regression coverage so unrecognized directions do not trigger a hardware pulse. Connectivity loss is a separate operating-policy decision; it should not be confused with accepting an invalid command.
+I built a FastAPI collector for heartbeats and logs. If a response is lost after the collector stores a batch, the device can retry without counting the same records twice. Tests exercise retry deduplication per device. I also wrote the setup and verification checklist used by the technician who handles physical installation.
 
-Another field investigation showed why a single CPU measurement was misleading: it landed between animation cycles. I added continuous sampling and changed animation timing after comparing sustained behavior on the device. That experience changed how I validate performance fixes.
+*Python, Raspberry Pi, Linux, systemd, WebSocket, GPIO, FastAPI, Prometheus, Grafana.*
 
-**Stack:** Python, Linux, Raspberry Pi, WebSocket, GPIO, systemd, pytest. Source is private.
+<a name="sepetarasi"></a>
 
-<a id="veligeldi"></a>
+## SepetArası
+
+**One restaurant completed more than 12,400 orders with the system from April through October 2026.**
+
+I built a React kitchen and pickup interface, an Electron cashier app, and a TypeScript backend. The restaurant’s existing LED display could not run the modern browser interface, so I added a lightweight HTML view it could use.
+
+When a display loses its connection, it can miss an order becoming ready. I made it fetch the server’s current order state after reconnecting. A regression test takes the display from preparing to ready even when it misses the original WebSocket update.
+
+*TypeScript, Fastify, React, Electron, SQLite, WebSocket.*
+
+<a name="veligeldi"></a>
+
 ## VeliGeldi
 
-**Live at 1 school.**
+**The system sent about 2,500 classroom pickup notifications a month as of October 2026.**
 
-A guardian uses the entrance kiosk to find the linked student. The system sends a notification to the relevant classroom and plays name audio. It coordinates pickup communication; it does not record a teacher's custody approval.
+I built the .NET backend, classroom notification client, licensing service, and name-audio integration. I made balances derive from a ledger and placed the check and spend in one PostgreSQL transaction protected by an advisory lock.
 
-I built the .NET backend, PostgreSQL data layer and classroom application, along with the companion licensing and TTS service. A key backend problem was preventing concurrent requests from spending the same remaining credit. The implementation derives balances from a ledger, combines the check and spend inside a database transaction, and uses uniqueness constraints to make repeated operations safe. A PostgreSQL-specific test observes lock contention instead of hoping two tasks happen to overlap.
+The integration test makes a second request wait while the first holds the lock. When it resumes, it sees the updated balance and declines the spend. I also built versioned Windows updates and rollback and fixed a service-update issue found on the school’s PowerShell version.
 
-For field maintenance, I added versioned Windows updates and rollback. A real upgrade exposed a PowerShell-version incompatibility; I corrected service retargeting for the deployed environment.
+*C#, ASP.NET Core, PostgreSQL, SignalR, Avalonia.* [Public product website](https://veligeldi.com)
 
-**Stack:** C#, ASP.NET Core, EF Core, PostgreSQL, SignalR, Avalonia. Source is private.
-
-<a id="announceflow"></a>
 ## AnnounceFlow
 
-**Used by 3 customers in 3 locations.**
+**Live audio and scheduled announcements in use at four locations as of 6 October 2026.**
 
-AnnounceFlow combines scheduled announcements, playlists, live audio and automatic playback policies on a Raspberry Pi, controlled through a web panel and Windows application.
+I built the Flask control panel, Windows audio sender, and playback software on Raspberry Pi. I used logs from both ends to locate packet fragmentation during live audio. Smaller audio blocks addressed that failure mode. Receiver recovery uses cooldowns, and its tests cover stopping playback while a recovery is in progress.
 
-Audio interruptions required looking at the sender, network and receiver together. I added diagnostic context, reduced UDP audio block size to address fragmentation, and implemented bounded recovery with cooldowns and stop/start race protection. Those changes address different failure modes; I do not treat one successful session as proof that every audio issue is solved.
+*Python, Flask, SQLite, UDP, Windows audio, Raspberry Pi.* [Source and setup](https://github.com/berkaybakac/announceflow)
 
-**Public implementation:** [UDP block sizing](https://github.com/berkaybakac/announceflow/commit/648bec4b5db6ff57215597c63ecdffee04e65822) · [Recovery cooldown](https://github.com/berkaybakac/announceflow/commit/45edd2dc4e7ca79f2e4988d8b20c94c9c554a0c7).
+## Retail Price Checker
 
-**Stack:** Python, Flask, SQLite, Raspberry Pi/Linux, Windows audio capture. [Source and setup](https://github.com/berkaybakac/announceflow).
+**Android price terminals used across multiple retail branches.**
 
-<a id="sepetarasi"></a>
-## SepetArası Order Tracking
+I connected the terminals to the retailer’s SQL Server through a central .NET API. A delayed response from one scan could overwrite a newer price. I made the latest scan authoritative, cancelled superseded requests, and checked the scan identity before applying responses or timers. The regression covers the case where a previous lookup returns last.
 
-**Live in one restaurant.**
+*Kotlin, Android, ASP.NET Core, SQL Server.*
 
-The product connects the cashier application, administration and customer order display over a local network. It includes real-time order updates, audio announcements and receipt-printing integration.
+<a name="bank-transfer-notifications"></a>
 
-The customer's display hardware could not be treated like a modern desktop browser. I implemented a dedicated HTML compatibility renderer and display presets. I also added reconnect/snapshot recovery coverage and changed item loading from per-order queries to a batched database query.
+## Havale Bildirim
 
-**Public implementation:** [Display compatibility](https://github.com/berkaybakac/sepetarasi-order-tracking/commit/82da7140a523c691f7a42130c51810db5aa70477) · [Reconnect coverage](https://github.com/berkaybakac/sepetarasi-order-tracking/commit/367b58d48d6a627f20f7ed458abe79137e9cd5fa) · [Batched queries](https://github.com/berkaybakac/sepetarasi-order-tracking/commit/d3c8bce0881ee5f0b73bfe2038a84d138eacf7d7).
+**First customer installation documented in November 2026.**
 
-**Stack:** TypeScript, Fastify, React, Electron, SQLite/Drizzle, WebSocket. [Source and setup](https://github.com/berkaybakac/sepetarasi-order-tracking).
+I built a Windows app that lets cashiers see incoming bank transfers and print informational receipts. I designed the sync so the same transaction is recorded only once and queued receipts can resume after the printer reconnects. The first field release was v1.0.0. Subsequent release artifacts have their own installation and verification records.
+
+*C#, Windows, SQLite, bank integrations, receipt printing.*
+
+<a name="kadans-tellal"></a>
+
+## Kadans & Tellal
+
+**Customer pilot. The server was installed at the customer site and playback was exercised on a Raspberry Pi in the office.**
+
+I built the workflow that turns campaign data into an in-store announcement. Claude drafts wording, code inserts prices and dates, and ElevenLabs generates the audio. If validation fails or the text budget is reached, the system uses a standard script. The FastAPI backend serves playback plans over HTTPS. A Go broker uses MQTT for plan changes and device presence.
+
+*Python, FastAPI, PostgreSQL, Go, MQTT, HTTPS, Raspberry Pi.*
+
+## Career Portal
+
+**Personal development project.**
+
+I built a local application-workflow tool in which one agent drafts from selected evidence and another reviews independently. The system checks structured output and saves each completed stage, so I can resume an interrupted run and approve the final text myself.
+
+*Python, FastAPI, React, SQLite, Claude Code, Codex.*
+
+[Back to profile](README.md)

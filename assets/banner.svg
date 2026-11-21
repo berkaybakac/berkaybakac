@@ -1,13 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="270" viewBox="0 0 1200 270" role="img" aria-labelledby="title desc">
-<title id="title">Berkay Bakaç — Software Engineer, Backend &amp; Device Integration</title><desc id="desc">Backend, Edge, Production. Building software for real devices, from development to field support.</desc>
-<rect width="1200" height="270" rx="18" fill="#142438"/>
-<path d="M800 0 V270 M1000 0 V270 M0 215 H1200" stroke="#273b50" stroke-width="1"/>
-<rect x="42" y="43" width="5" height="140" rx="2" fill="#68d8b3"/>
-<text x="69" y="87" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="700" fill="#f6f8fb">Berkay Bakaç</text>
-<text x="69" y="128" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" fill="#b7ccde">Software Engineer | Backend &amp; Device Integration</text>
-<text x="69" y="173" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d4e0eb">From backend services to devices in daily use.</text>
-<path d="M815 127 H1081" stroke="#68d8b3" stroke-width="2"/>
-<g fill="#142438" stroke="#68d8b3" stroke-width="2"><circle cx="815" cy="127" r="10"/><circle cx="948" cy="127" r="10"/><circle cx="1081" cy="127" r="10"/></g>
-<g font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#d4e0eb" text-anchor="middle"><text x="815" y="171">Backend</text><text x="948" y="171">Edge</text><text x="1081" y="171">Production</text></g>
-<text x="69" y="247" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#a4bdcf">PYTHON  /  C#  /  TYPESCRIPT</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="192" viewBox="0 0 1200 192" role="img" aria-labelledby="title">
+  <title id="title">Embedded software connects devices, networks and services</title>
+  <defs>
+    <linearGradient id="panel" x2="1" y2="1">
+      <stop stop-color="#101737"/>
+      <stop offset="1" stop-color="#242e70"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0v24" fill="none" stroke="#8397ef" stroke-opacity=".15"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="192" rx="19" fill="url(#panel)"/>
+  <rect width="1200" height="192" rx="19" fill="url(#grid)"/>
+  <g fill="none" stroke="#8ca3ff" stroke-width="2">
+    <path d="M0 132h100l24-24h136m0 16h-116l-22 22H0m0 14h145l26-20h89M354 71h104l26 29h72m-202-13h95l30 29h77m-202-13h83l30 29h89m91-65h124l26-20h119m-269 38h136l27-23h106m-269 39h146l29-23h94m96-9h72l19 17h77m-168 2h64l21 16h83" opacity=".7"/>
+    <path d="M260 56h94v74h-94zm296 22h90v70h-90zm360-32h96v63h-96z" stroke="#b4c1fa" opacity=".85"/>
+  </g>
+  <g fill="#16234d" stroke="#9fb3ff" stroke-width="2">
+    <rect x="274" y="70" width="66" height="46" rx="8"/>
+    <rect x="570" y="89" width="62" height="48" rx="8"/>
+    <rect x="929" y="57" width="70" height="41" rx="8"/>
+  </g>
+  <g fill="none" stroke="#e1e8ff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="296" y="82" width="22" height="22" rx="3"/>
+    <path d="M290 87h6m-6 11h6m22-11h6m-6 11h6m-23-5h12M589 107h24m-6-6 6 6-6 6m6 6h-24m6-6-6 6 6 6M945 69h38v7h-38zm0 10h38v7h-38z"/>
+  </g>
+  <g fill="#b8c7ff">
+    <circle cx="124" cy="108" r="4"/><circle cx="458" cy="71" r="4"/><circle cx="800" cy="47" r="4"/><circle cx="1076" cy="69" r="4"/>
+  </g>
+  <g fill="#eef1ff" font-family="system-ui, sans-serif" font-size="24" font-weight="650" text-anchor="middle">
+    <text x="306" y="161">Device software</text>
+    <text x="601" y="46">Communication</text>
+    <text x="964" y="142">Backend services</text>
+  </g>
 </svg>

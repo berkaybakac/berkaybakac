@@ -1,42 +1,30 @@
-![Berkay Bakaç — Software Engineer. Backend, Edge, Production.](assets/banner.svg)
+# Berkay Bakaç
 
-**Software Engineer | Backend & Device Integration**
+**Software Engineer · Connected devices, backend systems, and field delivery**
 
-I build backend services and device-connected software used in stores, restaurants, fitness locations and a school. At Statek Stabil Teknoloji, I am the sole software developer responsible for requirements, implementation, deployment and field support.
+At Statek Stabil Teknoloji, I’m the sole software developer behind products used in stores, a restaurant, and a school. I work directly with customers to define what they need and build the backend, interfaces, and device software. I own releases, monitoring, and field support.
 
-Based in Türkiye. **Open to international remote, contractor and relocation opportunities.**
+[Engineering case studies](case-studies.md) · [Portfolio](https://berkaybakac.vercel.app/en/) · [LinkedIn](https://www.linkedin.com/in/berkay-bakac/) · [Email](mailto:berkaybakacwork@gmail.com)
 
-[Engineering case studies](case-studies.md) · [LinkedIn](https://www.linkedin.com/in/berkay-bakac/) · [Email](mailto:berkaybakacwork@gmail.com)
+![Diagram showing device software, network communication, and backend services](assets/banner.svg)
 
-### In use
+## Selected work
 
-| Product | What I build and maintain | Deployment snapshot |
-|---|---|---|
-| [AnnounceFlow](https://github.com/berkaybakac/announceflow) | Scheduled announcements, live Windows-to-Pi audio and a Flask control panel | 3 customers / 3 locations |
-| [SepetArası](https://github.com/berkaybakac/sepetarasi-order-tracking) | TypeScript restaurant ordering, cashier/customer displays and real-time updates | 1 restaurant |
-| [VeliGeldi — case study](case-studies.md#veligeldi) | School pickup notifications and licensing/TTS services with .NET and PostgreSQL | 1 school |
-| [Turnstile Device Agent — case study](case-studies.md#turnstile) | Python, vendor WebSocket integration, Raspberry Pi kiosks and GPIO control | 7 locations across 3 cities |
+- **[Turnstile Device Agent](case-studies.md#turnstile)** — Built Python software for **18 turnstiles across six cities** as of November 2026. Offline mode kept gates usable during a documented 10-hour outage. A FastAPI collector receives device telemetry and deduplicates retried logs.
+- **[SepetArası](case-studies.md#sepetarasi)** — Built the cashier, kitchen, and pickup screens for a restaurant that completed **12,400+ orders from April through October 2026**. A display that reconnects reloads current orders so it can recover from missed updates.
+- **[VeliGeldi](case-studies.md#veligeldi)** — Built the .NET backend and classroom notification software that sent **about 2,500 notifications a month** as of October 2026. A PostgreSQL test confirms that two requests cannot spend the same credit.
 
-Deployment counts last confirmed 2026-09-08. Turnstile and VeliGeldi source code is private; public case studies cover the engineering decisions.
+## More products in use
 
-### Engineering notes
+- **[AnnounceFlow](case-studies.md#announceflow)** — Built scheduled announcements and live Windows-to-Raspberry Pi audio in use at four locations as of 6 October 2026. Traced dropouts to UDP fragmentation. [Source code](https://github.com/berkaybakac/announceflow)
+- **[Retail Price Checker](case-studies.md#retail-price-checker)** — Connected Android price terminals to SQL Server through a .NET API. Fixed a race that let late replies overwrite the latest scan. In use across multiple branches.
+- **[Havale Bildirim](case-studies.md#bank-transfer-notifications)** — Shipped a Windows app that alerts cashiers to incoming transfers, filters duplicate transactions, and resumes pending receipt printing. First customer installation documented in November 2026.
 
-- [Audio diagnostics and bounded recovery](case-studies.md#announceflow)
-- [Making existing display hardware usable](case-studies.md#sepetarasi)
-- [A credit ledger that handles concurrent requests](case-studies.md#veligeldi)
-- [Connecting vendor events to physical turnstiles](case-studies.md#turnstile)
+## Applied AI and how I work
 
-### Working stack
+I use Claude Code and Codex daily for investigation, implementation, and review. I check the changes myself, test what happens on failure, and take responsibility for the release.
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![C%23](https://img.shields.io/badge/C%23%20%2F%20.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-202A35?style=flat-square&logo=linux&logoColor=white)
-![Raspberry%20Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white)
+- **[Kadans & Tellal](case-studies.md#kadans-tellal) · Customer pilot** — Built a retail announcement workflow with Claude and ElevenLabs. Code controls the campaign facts and the fallback. A Go broker carries plan revisions and device presence over MQTT while devices fetch plans over HTTPS.
+- **[Career Portal](case-studies.md#career-portal) · Personal project** — Built a local workflow that validates agent output, saves completed stages, and routes drafts through independent review before I approve them.
 
-- **Python / Linux / Raspberry Pi:** audio scheduling, device agents and field diagnostics.
-- **C#/.NET / PostgreSQL:** classroom notifications, credit accounting and licensing services.
-- **TypeScript / React / Fastify:** restaurant ordering, cashier applications and real-time displays.
-
-**Ongoing development:** Kadans, Tellal AI and a retail barcode price checker; not included in the deployment figures above.
+Based in Türkiye. Open to international remote work, contracting, and relocation.
