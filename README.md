@@ -8,31 +8,23 @@ I design, build and run production systems, from architecture to the customer's 
 
 [Engineering case studies](case-studies.md) · [Portfolio](https://berkaybakac.vercel.app/en/) · [LinkedIn](https://www.linkedin.com/in/berkay-bakac/) · [Email](mailto:berkaybakacwork@gmail.com)
 
-## Selected work
+## Production work
 
-### [Kadans & Tellal](https://github.com/berkaybakac/kadans-case-study)
-
-A production system for a regional, multi-city grocery chain with 20+ branches. One HQ server on the customer's network manages promotions, music, hours and prayer silence for every branch, with in-store Raspberry Pi players rolled out in stages. I designed, built and run it end to end as sole engineer, integrated with the customer's SQL Server ERP, network and VPN, and Windows server.
-
-- **Architecture.** Declarative, versioned plan snapshots instead of play commands; MQTT 5 hints with HTTPS as the source of truth; at-most-once playback that never replays a promotion.
-- **Tellal**, an AI announcement platform I designed and built, with Kadans as its first client, integrates Claude (Anthropic) and ElevenLabs. The model writes only words around placeholders; prices and dates come from code, with prepaid balances and spending caps on every call.
-- **Operations.** Signed, canary-gated releases that the customer's server installs unattended overnight, with transactional rollback; outbound-only monitoring with Prometheus and Grafana; a clean-Windows release pipeline.
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/kadans-dark.svg">
-  <img alt="Ten steps from a price change in the ERP to an announcement in the store, with the music ducking under it" src="assets/kadans-light.svg">
-</picture>
-
-**[Read the case study →](https://github.com/berkaybakac/kadans-case-study)** · [Design decisions](https://github.com/berkaybakac/kadans-case-study/blob/main/docs/decisions.md) · [Tellal](https://github.com/berkaybakac/kadans-case-study/blob/main/docs/tellal.md)
-
-## Other production work
-
+- **[Kadans & Tellal](https://github.com/berkaybakac/kadans-case-study)** · In-store audio and AI announcements for a regional, multi-city grocery chain with 20+ branches. One HQ server on the customer's network turns ERP price changes into spoken announcements for every branch, with music, opening hours and prayer silence, played by a fleet of in-store Raspberry Pi players. Tellal, the AI announcement platform behind it, integrates Claude (Anthropic) and ElevenLabs. Designed, built and run end to end as sole engineer. [Case study](https://github.com/berkaybakac/kadans-case-study)
 - **[Turnstile Device Agent](case-studies.md#turnstile)** · Built Python software for **18 turnstiles across six cities**. Offline mode kept gates usable during a documented 10-hour outage. A FastAPI collector receives device telemetry and deduplicates retried logs.
 - **[SepetArası](case-studies.md#sepetarasi)** · Built the cashier, kitchen, and pickup screens for a restaurant that completed **12,400+ orders over seven months**. A display that reconnects reloads current orders so it can recover from missed updates.
 - **[VeliGeldi](case-studies.md#veligeldi)** · Built the .NET backend and classroom notification software that sends **about 2,500 notifications a month**. A PostgreSQL test confirms that two requests cannot spend the same credit.
-- **[AnnounceFlow](case-studies.md#announceflow)** · The per-store predecessor of Kadans: one installation per store, in use at four locations. Built scheduled announcements and live Windows-to-Raspberry Pi audio, and traced dropouts to UDP fragmentation. [Source code](https://github.com/berkaybakac/announceflow)
-- **[Retail Price Checker](case-studies.md#retail-price-checker)** · Connected Android price terminals to SQL Server through a .NET API. Fixed a race that let late replies overwrite the latest scan. In use across multiple branches.
-- **[Havale Bildirim](case-studies.md#bank-transfer-notifications)** · Shipped a Windows app that alerts cashiers to incoming transfers, filters duplicate transactions, and resumes pending receipt printing.
+- **[AnnounceFlow](case-studies.md#announceflow)** · The per-store predecessor of Kadans, in use at four locations: scheduled announcements and live Windows-to-Raspberry Pi audio; traced dropouts to UDP fragmentation. [Source code](https://github.com/berkaybakac/announceflow)
+- **[Retail Price Checker](case-studies.md#retail-price-checker)** · Connected Android price terminals to SQL Server through a .NET API, in use across multiple branches. Fixed a race that let late replies overwrite the latest scan.
+- **[Havale Bildirim](case-studies.md#bank-transfer-notifications)** · A Windows app that alerts cashiers to incoming bank transfers, filters duplicate transactions, and resumes pending receipt printing.
+
+## Open-source & personal
+
+- **[rag-supportbot](https://github.com/berkaybakac/rag-supportbot)** · Offline, document-grounded AI assistant for technical support teams: a full retrieval-augmented generation pipeline with LLaMA and FAISS.
+- **[android-page-to-pdf](https://github.com/berkaybakac/android-page-to-pdf)** · Offline Android app that captures pages in order with automatic page turns and hands the PDF to Samsung Notes.
+- **[rpi-location-audio-scheduler](https://github.com/berkaybakac/rpi-location-audio-scheduler)** · Location-aware audio scheduler for Raspberry Pi with systemd automation, offline caching and direct ALSA control.
+
+**Stack:** Python · Go · C#/.NET · TypeScript/React · FastAPI · PostgreSQL · SQL Server · MQTT · Docker · Linux · Raspberry Pi · Prometheus/Grafana · LLM and speech APIs
 
 ## How I work
 
