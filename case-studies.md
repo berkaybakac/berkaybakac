@@ -2,19 +2,29 @@
 
 I design, build and maintain these products as my employer's sole software engineer. I work directly with the people who use them and stay involved through release, monitoring, and field support.
 
-[Kadans & Tellal](#kadans-tellal) · [Turnstile](#turnstile) · [SepetArası](#sepetarasi) · [VeliGeldi](#veligeldi) · [AnnounceFlow](#announceflow) · [Price Checker](#retail-price-checker) · [Havale Bildirim](#bank-transfer-notifications)
+[Kadans](#kadans-tellal) · [Tellal](#tellal) · [Turnstile](#turnstile) · [SepetArası](#sepetarasi) · [VeliGeldi](#veligeldi) · [AnnounceFlow](#announceflow) · [Price Checker](#retail-price-checker) · [Havale Bildirim](#bank-transfer-notifications)
 
 <a name="kadans-tellal"></a>
 
-## Kadans & Tellal
+## Kadans
 
 **A production system for a regional, multi-city grocery chain with 20+ branches.**
 
 One HQ server on the customer's network manages promotions, music, hours and prayer silence for every branch, with in-store Raspberry Pi players rolled out in stages. I designed, built and run it end to end, integrated with the customer's SQL Server ERP, network and VPN, and Windows server. The server publishes a versioned plan for each branch instead of play commands, so players keep going through network outages, and announcements play at most once, so a promotion is never replayed. The customer's server checks each night for a signed, canary-approved release and installs it unattended, rolling back from any failed step.
 
-Behind it runs **Tellal**, an AI announcement platform I designed and built, with Kadans as its first client. It integrates Claude (Anthropic) for copy and ElevenLabs for speech: the model writes only words around placeholders, code inserts prices and dates, and rejected copy falls back to a verified sentence in the same voice. Idempotent operations make every paid call safe to retry, and prepaid balances with spending caps checked inside the transaction prevent overspending.
+Copy and speech come from Tellal, below.
 
-*Python, FastAPI, PostgreSQL, Go, MQTT 5, React, TypeScript, Raspberry Pi, PowerShell, Prometheus, Grafana, Claude API, ElevenLabs.* [Full case study](https://github.com/berkaybakac/kadans-case-study) · [Tellal](https://github.com/berkaybakac/kadans-case-study/blob/main/docs/tellal.md)
+*Python, FastAPI, PostgreSQL, Go, MQTT 5, React, TypeScript, Raspberry Pi, PowerShell, Prometheus, Grafana.* [Full case study](https://github.com/berkaybakac/kadans-case-study)
+
+<a name="tellal"></a>
+
+## Tellal
+
+**An AI announcement platform, built for several clients; Kadans is the first.**
+
+Claude (Anthropic) writes the copy and ElevenLabs speaks it. The model writes only words around placeholders and code inserts prices and dates, so it can never state a wrong price; rejected copy falls back to a verified sentence in the same voice. Idempotent operations make every paid call safe to retry, and prepaid balances with spending caps checked inside the same transaction prevent overspending. Projects, scoped keys and versioned prompt and voice profiles serve several clients; an admin panel, fleet view and Prometheus/Grafana monitoring run it.
+
+*Python, FastAPI, SQLite, Claude API, ElevenLabs, nginx, Prometheus, Grafana, Playwright.* [Full case study](https://github.com/berkaybakac/tellal-case-study)
 
 <a name="turnstile"></a>
 
