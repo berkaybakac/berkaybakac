@@ -30,13 +30,11 @@ Claude (Anthropic) writes the copy and ElevenLabs speaks it. The model writes on
 
 ## Turnstile Device Agent
 
-**Built software for 18 turnstiles across six cities.**
+**QR access control for more than 20 turnstiles at gyms, studios and a swimming facility in seven cities, in production since June 2026.**
 
-I wrote the Python agent that connects a vendor access platform to Raspberry Pi kiosks and GPIO-controlled turnstiles. I validated incoming WebSocket events before they could trigger hardware. During a documented 10-hour upstream outage, the affected gates stayed usable through their configured offline mode.
+I built the device agent and its telemetry collector. The partner platform authorizes individual access; my agent shows its QR codes, decides the gate output for each grant, and switches to free passage after a sustained platform disconnect. The fleet handled more than 90,000 access approvals in its first six months; from 28 October to 27 November 2026 alone, 13 turnstiles handled 29,158, each new pulse a median of 3 ms after the device logged the approval. I prepare new devices on the bench, deploy tagged releases remotely and monitor the fleet with Prometheus device alerts that start only within each venue's opening hours; a company technician mounts each unit and checks passage on site.
 
-I built a FastAPI collector for heartbeats and logs. If a response is lost after the collector stores a batch, the device can retry without counting the same records twice. Tests exercise retry deduplication per device. I also wrote the setup and verification checklist used by the technician who handles physical installation.
-
-*Python, Raspberry Pi, Linux, systemd, WebSocket, GPIO, FastAPI, Prometheus, Grafana.*
+*Python, asyncio, WebSockets, Raspberry Pi, Linux, systemd, GPIO, RS-485, FastAPI, Prometheus, Grafana, Tailscale.* [Full case study](https://github.com/berkaybakac/turnstile-case-study)
 
 <a name="sepetarasi"></a>
 
