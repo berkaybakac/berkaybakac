@@ -2,7 +2,7 @@
 
 I design, build and maintain these products as my employer's sole software engineer. I work directly with the people who use them and stay involved through release, monitoring, and field support.
 
-[Kadans](#kadans-tellal) · [Tellal](#tellal) · [Turnstile](#turnstile) · [SepetArası](#sepetarasi) · [Guardian Pickup](#veligeldi) · [AnnounceFlow](#announceflow) · [Price Checker](#retail-price-checker) · [Havale Bildirim](#bank-transfer-notifications)
+[Kadans](#kadans-tellal) · [Tellal](#tellal) · [Turnstile](#turnstile) · [Restaurant Order Pickup](#restaurant-pickup) · [Guardian Pickup](#veligeldi) · [AnnounceFlow](#announceflow) · [Price Checker](#retail-price-checker) · [Havale Bildirim](#bank-transfer-notifications)
 
 <a name="kadans-tellal"></a>
 
@@ -36,17 +36,17 @@ I built the device agent and its telemetry collector. The partner platform autho
 
 *Python, asyncio, WebSockets, Raspberry Pi, Linux, systemd, GPIO, RS-485, FastAPI, Prometheus, Grafana, Tailscale.* [Full case study](https://github.com/berkaybakac/turnstile-case-study)
 
-<a name="sepetarasi"></a>
+<a name="restaurant-pickup"></a>
 
-## SepetArası
+## Restaurant Order Pickup
 
-**One restaurant completed more than 12,400 orders with the system over seven months.**
+**Offline-first ordering and pickup at a restaurant in Türkiye: more than 15,700 orders from April to November 2026; non-cancelled orders rose from 1,178 in May to 2,914 in October.**
 
-I built a React kitchen and pickup interface, an Electron cashier app, and a TypeScript backend. The restaurant's existing LED display could not run the modern browser interface, so I added a lightweight HTML view it could use.
+I built an Electron till that prints ESC/POS receipts over the LAN, a TypeScript service with SQLite and WebSocket on an on-site Raspberry Pi 4, React screens for the order board and the customer pickup display, and spoken pickup calls over the background music. The restaurant's LED panel could not reliably boot the React interface, so the Pi serves it a self-contained page, which I validated on the panel at the site.
 
-When a display loses its connection, it can miss an order becoming ready. I made it fetch the server's current order state after reconnecting. A regression test takes the display from preparing to ready even when it misses the original WebSocket update.
+One SQLite transaction saves each ticket with its daily number and first event, and marking an order ready queues its call in the same transaction. On reconnect, the React screens fetch the order list to catch up on missed updates. In November 2026, 496 automated tests passed.
 
-*TypeScript, Fastify, React, Electron, SQLite, WebSocket.*
+*TypeScript, Electron, React, Node.js, Fastify, SQLite, WebSocket, Raspberry Pi, ESC/POS.* [Full case study](https://github.com/berkaybakac/restaurant-pickup-case-study)
 
 <a name="veligeldi"></a>
 
