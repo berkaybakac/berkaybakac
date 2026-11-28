@@ -2,7 +2,7 @@
 
 I design, build and maintain these products as my employer's sole software engineer. I work directly with the people who use them and stay involved through release, monitoring, and field support.
 
-[Kadans](#kadans-tellal) · [Tellal](#tellal) · [Turnstile](#turnstile) · [SepetArası](#sepetarasi) · [VeliGeldi](#veligeldi) · [AnnounceFlow](#announceflow) · [Price Checker](#retail-price-checker) · [Havale Bildirim](#bank-transfer-notifications)
+[Kadans](#kadans-tellal) · [Tellal](#tellal) · [Turnstile](#turnstile) · [SepetArası](#sepetarasi) · [Guardian Pickup](#veligeldi) · [AnnounceFlow](#announceflow) · [Price Checker](#retail-price-checker) · [Havale Bildirim](#bank-transfer-notifications)
 
 <a name="kadans-tellal"></a>
 
@@ -50,15 +50,15 @@ When a display loses its connection, it can miss an order becoming ready. I made
 
 <a name="veligeldi"></a>
 
-## VeliGeldi
+## Guardian Pickup (VeliGeldi)
 
-**The system sends about 2,500 classroom pickup notifications a month.**
+**Authorized pickup at a private kindergarten in Türkiye, in production since August 2026. In November 2026 the school's registry held more than 250 active pupils and more than 500 active guardian-to-pupil links.**
 
-I built the .NET backend, classroom notification client, licensing service, and name-audio integration. I made balances derive from a ledger and placed the check and spend in one PostgreSQL transaction protected by an advisory lock.
+I built the school's on-premises .NET system (entrance kiosk, ASP.NET Core server with SignalR, Avalonia classroom client), the vendor licensing and speech services, and the remote maintenance channel. Credit balances derive from an append-only ledger, and a PostgreSQL advisory lock serializes the check and spend: the integration test spends the last credit while a second enrollment waits, and the waiting enrollment then declines without creating a link.
 
-The integration test makes a second request wait while the first holds the lock. When it resumes, it sees the updated balance and declines the spend. I also built versioned Windows updates and rollback and made service updates work on the school's Windows PowerShell 5.1.
+I deliver server upgrades through the school's filtered connection with signed, time-limited jobs over outbound HTTPS, and delivered a real upgrade that way. The upgrade workflow checkpoints PostgreSQL, so a rollback can restore the database that matches the previous executable. In November 2026, 842 automated .NET tests passed across the school and licensing suites with PostgreSQL 17 available.
 
-*C#, ASP.NET Core, PostgreSQL, SignalR, Avalonia.* [Public product website](https://veligeldi.com)
+*C#, .NET 10, ASP.NET Core, EF Core, PostgreSQL 17, SignalR, Avalonia, PowerShell.* [Full case study](https://github.com/berkaybakac/guardian-pickup-case-study) · [Product website](https://veligeldi.com)
 
 ## AnnounceFlow
 
